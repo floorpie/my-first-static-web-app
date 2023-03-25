@@ -2,7 +2,10 @@
     "routes": [
         {
             "route": "/authenticated/*",
-            "allowedRoles": [ "authenticated" ]
+            "allowedRoles": [ "authenticated" ],
+            "headers": {
+                "Cache-Control": "no-store"
+            }
         }
     ],
     "auth": {
@@ -19,6 +22,19 @@
     },
     "globalHeaders": {
         "Cache-Control": "no-cache"
-    }
-}
+    },
 
+
+"networking": {
+    "allowedIpRanges": ["AzureFrontDoor.Backend"]
+  },
+
+  "forwardingGateway": {
+    "requiredHeaders": {
+      "X-Azure-FDID" : "e9605e94-9852-46de-943d-f5e1b4c2f829"
+    },
+    "allowedForwardedHosts": [
+      "CSA-SWA-FD-a7dugjg4e5fybhfp.z01.azurefd.net"
+    ]
+  }
+}
