@@ -2,21 +2,12 @@
     "trailingSlash": "auto",
     "routes": [
       {
-        "route": "/src*",
+        "route": "/src/*",
         "allowedRoles": ["authenticated"]
       },
       {
         "route": "/api/*",
         "allowedRoles": ["authenticated"]
-      },
-      {
-        "route": "/login",
-        "rewrite": "/.auth/login/github"
-      },
-      {
-        "route": "/logout",
-        "redirect": "/.auth/logout"
       }
-    
     ]
 }
