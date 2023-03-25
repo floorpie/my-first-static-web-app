@@ -20,6 +20,13 @@
     <hr>
     <div>
         <ul>
+            <li> <script>
+                (async function() {
+                    const { text } = await( await fetch(`/api/message`)).json();
+                    document.querySelector('#name').textContent = text;
+                }());
+                </script>
+            </li>
             <li><a href="/anonymous/">All users can access this page</a></li>
             <li><a href="/authenticated/">All authenticated users can access this page</a></li>
             <!-- <li><a href="/admin/">Only users in the admin custom role can access this page</a></li> -->
