@@ -6,6 +6,10 @@
         "allowedRoles": ["authenticated"]
       },
       {
+        "route": "/api/*",
+        "allowedRoles": ["authenticated"]
+      },
+      {
         "route": "/login",
         "rewrite": "/.auth/login/github"
       },
