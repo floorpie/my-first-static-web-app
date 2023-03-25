@@ -28,13 +28,6 @@
     <hr>
     <pre></pre>
     <script>
-        (async function() {
-            const { text } = await( await fetch(`/api/message`)).json();
-            document.querySelector('#name').textContent = text;
-        }());
-        </script>
-        
-    <script>
         async function getUserInfo() {
             const response = await fetch('/.auth/me');
             const user = await response.json();
