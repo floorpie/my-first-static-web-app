@@ -11,8 +11,8 @@
                 "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
                 "registration": {
                     "openIdIssuer": "https://login.microsoftonline.com/",
-                    "clientIdSettingName": "5c60c8f9-3644-41e7-8809-178d856e6fdc",
-                "clientSecretSettingName": "2H38Q~xsbVDJCSBI8gBQoUIEwlYeMowwnENw6bqm"
+                    "clientIdSettingName": "AZURE_CLIENT_ID",
+                "clientSecretSettingName": "AZURE_CLIENT_SECRET"
                 }
             }
         }
