@@ -1,4 +1,22 @@
 {
-    "route": "/src/index.html",
-    "allowedRoles": ["authenticated"]
-  }
+    "trailingSlash": "auto",
+    "routes": [
+      {
+        "route": "/src*",
+        "allowedRoles": ["authenticated"]
+      },
+      {
+        "route": "/api/*",
+        "allowedRoles": ["authenticated"]
+      },
+      {
+        "route": "/login",
+        "rewrite": "/.auth/login/github"
+      },
+      {
+        "route": "/logout",
+        "redirect": "/.auth/logout"
+      }
+    
+    ]
+}
