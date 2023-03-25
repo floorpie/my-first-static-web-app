@@ -37,7 +37,14 @@
 
         getUserInfo();
     </script>
-    <br>
+    <script>
+            (async function() {
+                const { text } = await( await fetch(`/api/message`)).json();
+                document.querySelector('#name').textContent = text;
+            }());
+    </script>
+        <br>
+        <br>
     Loading content from the API: <b id="name">...</b>
 </body>
 
